@@ -1,0 +1,27 @@
+<div *ngIf="countryData.length>0" class="mb-10">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 cursor-pointer mt-4">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col" class="px-6 py-3 text-white"><i class="bi bi-cursor-text mr-2"></i>Name</th>
+        <th scope="col" class="px-6 py-3 text-white"><i class="bi bi-bank mr-2"></i>Region</th>
+        <th scope="col" class="px-6 py-3 text-white"><i class="bi bi-building-fill mr-2"></i>Capital</th>
+        <th scope="col" class="px-6 py-3 text-white"></th>
+      </tr>
+    </thead>
+    <tbody
+      class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+      <tr *ngFor="let country of countryData; let i = index" scope="row"
+        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        <td class="px-6 py-4" id="flag-country"><img [src]="country.flags.png" /></td>
+        <td class="px-6 py-4">{{country.name.common}}</td>
+        <td class="px-6 py-4">{{country.region}}</td>
+        <td class="px-6 py-4">{{country.capital}}</td>
+        <td class="px-6 py-4"><button [routerLink]="['/country', country.ccn3]"
+            class="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"><i
+              class="bi bi-info-circle-fill mr-2"></i>More
+            Info</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

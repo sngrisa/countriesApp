@@ -1,0 +1,101 @@
+<div class="bg-slate-900 text-white max-w-2xl shadow overflow-hidden sm:rounded-lg font-bold cursor-pointer">
+  <div class="px-4 py-5 sm:px-6">
+    <h3 class="text-lg leading-6 font-medium text-white flex items-center">
+      <span class="mr-2"><img src={{countryData.flags.png}} class="imgCountry" /></span>
+      {{countryData.name.common}}
+    </h3>
+    <p class="mt-1 max-w-2xl text-sm text-white">
+      {{countryData.name.official}}
+    </p>
+  </div>
+  <div class="border-t border-gray-200 font-bold cursor-pointer bg-slate-800 ">
+    <dl>
+      <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 text-white">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-building-fill mr-2"></i>Capital
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-2">
+          {{countryData.capital}}
+        </dd>
+      </div>
+      <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 ">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-binoculars-fill mr-2 "></i>Region
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-2">
+          {{countryData.region}}
+        </dd>
+      </div>
+      <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium">
+          <i class="bi bi-globe-asia-australia mr-2 "></i>Subregion
+        </dt>
+        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-2">
+          {{countryData.subregion}}
+        </dd>
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-globe-americas mr-2 "></i>Continent
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-2">
+          {{countryData.continents}}
+        </dd>
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-textarea-resize mr-2 "></i>Area
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-2">
+          {{countryData.area}} km
+        </dd>
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-megaphone-fill mr-2 "></i>Languages
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-2">
+          {{countryData.languages}}
+        </dd>
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-people-fill mr-2 "></i>Population
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-2">
+          {{countryData.population}}
+        </dd>
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-globe mr-2 "></i> Latitude and Long
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-1">
+          [{{countryData.latlng[0]}} , {{countryData.latlng[1]}}]
+        </dd>
+
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-alarm-fill mr-2 "></i>Timezone
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-1">
+          {{countryData.timezones}}
+        </dd>
+      </div>
+      <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium ">
+          <i class="bi bi-map-fill mr-2 "></i>Maps
+        </dt>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-1">
+          <a [href]="countryData.maps.googleMaps" target="_blank"><i
+              class="bi bi-google text-gray-50 hover:text-gray-400" id="iconMaps"></i></a>
+        </dd>
+        <dd class="mt-1 text-sm  sm:mt-0 sm:col-span-1">
+          <a [href]="countryData.maps.openStreetMaps" target="_blank"><i class="bi bi-compass-fill text-gray-50 hover:text-gray-400
+            " id="iconMaps"></i></a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
